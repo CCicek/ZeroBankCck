@@ -21,6 +21,8 @@ public class LoginPage {
     @FindBy(xpath = "//input[@name='submit']")
     public WebElement loginButton;
 
+    @FindBy (css = ".alert.alert-error")
+    public WebElement errorMessage;
 
     public void login(){
         userName.sendKeys("username");
@@ -29,5 +31,9 @@ public class LoginPage {
     }
 
 
-
+    public void login(String s, String s1) {
+        userName.sendKeys(s);
+        password.sendKeys(s1);
+        loginButton.click();
+    }
 }

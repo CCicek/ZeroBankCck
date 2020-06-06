@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
-public class AccountActivity extends BasePage {
+import java.util.List;
+
+public class AccountActivityPage extends BasePage {
 
     @FindBy(linkText = "Show Transactions")
     public WebElement showTransactions;
@@ -16,6 +18,9 @@ public class AccountActivity extends BasePage {
 
     @FindBy(id = "aa_accountId")
     public WebElement selectAccount;
+
+    @FindBy (xpath = "//th")
+    public List<WebElement> transactionsTableColumns;
 
 
 
