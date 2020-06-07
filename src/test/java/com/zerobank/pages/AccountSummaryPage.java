@@ -21,6 +21,12 @@ public class AccountSummaryPage extends BasePage {
     public WebElement creditCard;
     @FindBy(xpath = "//a[contains(@href,'6')]")
     public WebElement brokarage;
+    @FindBy(xpath = "(//h2[contains(text(),'Cash Accounts')]/..//th)[7]")
+    public WebElement creditCardAccount;
+    @FindBy(xpath = "(//h2[contains(text(),'Cash Accounts')]/..//th)[8]")
+    public WebElement creditCreditCard;
+    @FindBy(xpath = "(//h2[contains(text(),'Cash Accounts')]/..//th)[9]")
+    public WebElement creditCardBalance;
 
     @FindBy(className = "board-header")
     public List<WebElement> accountTypes;
@@ -33,6 +39,9 @@ public class AccountSummaryPage extends BasePage {
 
         return BrowserUtils.getElementsText(By.xpath(xpath));
     }
+
+
+
 
 
 }

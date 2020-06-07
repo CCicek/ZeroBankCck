@@ -39,6 +39,7 @@ public class AccountSummarydef {
 
         //2nd step
         List<String> actualAccountTypes = BrowserUtils.getElementsText(new AccountSummaryPage().accountTypes);
+    //    System.out.println(expectedList.get(1));
         Assert.assertEquals(expectedList,actualAccountTypes);
 
         //3rd step
@@ -46,12 +47,15 @@ public class AccountSummarydef {
         List<String> expectedColumnNames = new ArrayList<>();
         for (int i = 0; i < maps.size(); i++) {
 
-            expectedColumnNames.add(maps.get(i).get("Credit Accounts"));
+            expectedColumnNames.add(maps.get(i).get(accountType));
         }
 
         List<String> actualColumnNames = new AccountSummaryPage().getColumnNames(accountType);
 
+      //  System.out.println(expectedColumnNames.get(1));
         Assert.assertEquals(expectedColumnNames,actualColumnNames);
+
+
     }
 
 

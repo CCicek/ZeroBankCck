@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>07 Jun 2020, 21:46</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityNavigation.account_drop_down_should_have_selected(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="94715900">0.094</td>
+              <td class="duration" data-value="94715900">0.143</td>
+              <td class="duration" data-value="473579500">0.473</td>
+              <td class="failed">80.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityNavigation.thePageShouldBeDisplayed(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="2407143380">2.407</td>
+              <td class="duration" data-value="2407143380">3.011</td>
+              <td class="duration" data-value="12035716900">12.035</td>
+              <td class="failed">80.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityNavigation.the_user_clicks_on_link_on_the_Account_Summary_page(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="1445172340">1.445</td>
+              <td class="duration" data-value="1445172340">1.552</td>
+              <td class="duration" data-value="7225861700">7.225</td>
+              <td class="failed">80.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.Hooks.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="598400">0.000</td>
+              <td class="duration" data-value="598400">0.001</td>
+              <td class="duration" data-value="2992000">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>5</td>
+              <td class="duration" data-value="870600440">0.870</td>
+              <td class="duration" data-value="870600440">1.424</td>
+              <td class="duration" data-value="4353002200">4.353</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.Login.theUserIsLoggedIn()</td>
+              <td>5</td>
+              <td class="duration" data-value="6895541200">6.895</td>
+              <td class="duration" data-value="6895541200">7.663</td>
+              <td class="duration" data-value="34477706000">34.477</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>6</td>
+            <td>30</td>
+            <td class="duration">1.952</td>
+            <td class="duration">34.477</td>
+            <td class="duration">58.568</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

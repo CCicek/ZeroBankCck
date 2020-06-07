@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.zerobank.runners.CukesRunner
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 59.668 s <<< FAILURE! - in com.zerobank.runners.CukesRunner
+Savings	account	redirect <dropdown>(Navigating	to	specific	accounts	in	Accounts	Activity)  Time elapsed: 9.335 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Cannot locate element with text: CheckingA
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-9QKTLD8', ip: '192.168.1.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
+Driver info: driver.version: unknown
+

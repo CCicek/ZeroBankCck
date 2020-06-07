@@ -45,4 +45,8 @@ public WebElement search;
         String tabLocator = "//a[normalize-space(text())='" + tab +"']";
         Driver.get().findElement(By.xpath(tabLocator)).click();
     }
+
+    public void getTitle() {
+
+    }
 }

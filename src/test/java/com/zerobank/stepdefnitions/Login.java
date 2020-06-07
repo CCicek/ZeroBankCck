@@ -12,11 +12,11 @@ public class Login {
     public void the_user_is_logged_in() {
         String url = ConfigurationReader.get("url");
         Driver.get().get(url);
-        new LoginPage().login();
+       // new LoginPage().login();
 
-        AccountSummaryPage accountSummary = new AccountSummaryPage();
-        BrowserUtils.waitFor(1);
-        accountSummary.navigateTo("Transfer Funds");
+    //    AccountSummaryPage accountSummary = new AccountSummaryPage();
+     //   BrowserUtils.waitFor(1);
+     //   accountSummary.navigateTo("Transfer Funds");
 /*
         TransferFunds transferFunds = new TransferFunds();
         transferFunds.submitButton.click();
@@ -67,4 +67,23 @@ public class Login {
     }
 
 
+    @When("the user logs in with credentials")
+    public void theUserLogsInWithCredentials() {
+        new LoginPage().login();
+
+    }
+
+    @When("the user logs in with invalid credantials {string} or {string}")
+    public void theUserLogsInWithInvalidCredantialsOr(String arg0, String arg1) {
+
+        new LoginPage().login(arg0,arg1);
+    }
+
+    @Given("the	user	is	logged	in")
+    public void theUserIsLoggedIn() {
+        String url = ConfigurationReader.get("url");
+        Driver.get().get(url);
+        new LoginPage().login();
+
+    }
 }
