@@ -45,11 +45,11 @@ public class FindTransactions {
 
         FindTransactionsPage ft = new FindTransactionsPage();
         // System.out.println(BrowserUtils.getElementsText(ft.tableDates));
-        System.out.println(ft.tableDates.size());
+      //  System.out.println(ft.tableDates.size());
         for (WebElement alltransactionsDates : ft.tableDates) {
             String str = alltransactionsDates.getText();
             str = str.replace("-", "");
-            System.out.println(str);
+           // System.out.println(str);
 
             //System.out.println(str.charAt(4));
             // System.out.println(str);
@@ -63,7 +63,14 @@ public class FindTransactions {
 
     @Then("the results should be sorted by most recent date")
     public void the_results_should_be_sorted_by_most_recent_date() {
-       
+
+        FindTransactionsPage ft = new FindTransactionsPage();
+        int firstDate=Integer.valueOf(ft.tableDates.get(0).getText().replace("-",""));
+        int lastDate=Integer.valueOf(ft.tableDates.get(ft.tableDates.size()-1).getText().replace("-",""));
+        //System.out.println(firstDate);
+        //System.out.println(lastDate);
+        Assert.assertTrue("lastdate bigger than first date",(lastDate>firstDate));
+
     }
 
     @Then("the results table should only not contain transactions dated “{int}-{int}-{int}”")
@@ -156,7 +163,7 @@ public class FindTransactions {
             String str = alltransactionsDates.getText();
             str = str.replace("-", "");
             int s=Integer.valueOf(str);
-            System.out.println(tDate + "----" + fDate + "----" + s);
+           // System.out.println(tDate + "----" + fDate + "----" + s);
 
             Assert.assertTrue("no Problem",(s>=fDate && s<=tDate));
 
