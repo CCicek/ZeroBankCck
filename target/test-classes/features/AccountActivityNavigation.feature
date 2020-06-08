@@ -1,4 +1,4 @@
-@www
+
 Feature:    Navigating	to	specific	accounts	in	Accounts	Activity
 
   Scenario Outline:    Savings	account	redirect <dropdown>

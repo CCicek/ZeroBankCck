@@ -1,4 +1,4 @@
-@www
+
 Feature:    Navigating	to	specific	accounts	in	Accounts	Activity
 
   Scenario Outline:    Savings	account	redirect <dropdown>
@@ -10,6 +10,6 @@ Feature:    Navigating	to	specific	accounts	in	Accounts	Activity
       | dropDown    |
       | Savings     |
       | Brokerage   |
-      | CheckingA    |
+      | CheckingA   |
       | Credit Card |
       | Loan        |
