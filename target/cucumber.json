@@ -1,13 +1,13 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-06-09T01:39:20.527Z",
+        "start_timestamp": "2020-06-09T02:27:31.262Z",
         "before": [
           {
             "result": {
-              "duration": 997600,
+              "duration": 997000,
               "status": "passed"
             },
             "match": {
@@ -16,13 +16,13 @@
           }
         ],
         "line": 3,
-        "name": "Add\ta\tnew\tpayee",
+        "name": "Available\tcurrencies",
         "description": "",
-        "id": "add-new-payee-under-pay-bills;add-a-new-payee",
+        "id": "purchase-foreign-currency;available-currencies",
         "after": [
           {
             "result": {
-              "duration": 594123000,
+              "duration": 610867200,
               "status": "passed"
             },
             "match": {
@@ -35,69 +35,245 @@
         "steps": [
           {
             "result": {
-              "duration": 8929207000,
+              "duration": 8889982400,
               "status": "passed"
             },
             "line": 4,
-            "name": "Add New Payee tab",
+            "name": "the user accesses the Purchase\tforeign\tcurrency\tcash tab",
             "match": {
-              "location": "com.zerobank.stepdefnitions.AddNewPayee.add_New_Payee_tab()"
+              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.theUserAccessesThePurchaseForeignCurrencyCashTab()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1919771700,
+              "duration": 1291995900,
               "status": "passed"
             },
             "line": 5,
-            "name": "creates\tnew\tpayee\tusing following\tinformation",
+            "name": "following\tcurrencies should be available",
             "match": {
-              "location": "com.zerobank.stepdefnitions.AddNewPayee.creates_new_payee_using_following_information(io.cucumber.datatable.DataTable)"
+              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.following_currencies_should_be_available(io.cucumber.datatable.DataTable)"
             },
             "rows": [
               {
                 "cells": [
-                  "Payee Name",
-                  "The Law Offices of Hyde, Price \u0026 Scharks"
+                  "Australia (dollar)"
                 ]
               },
               {
                 "cells": [
-                  "Payee Address",
-                  "100 Same st, Anytown, USA, 10001"
+                  "Canada (dollar)"
                 ]
               },
               {
                 "cells": [
-                  "Account",
-                  "Checking"
+                  "Switzerland (franc)"
                 ]
               },
               {
                 "cells": [
-                  "Payee Details",
-                  "XYZ account"
+                  "China (yuan)"
+                ]
+              },
+              {
+                "cells": [
+                  "Denmark (krone)"
+                ]
+              },
+              {
+                "cells": [
+                  "Eurozone (euro)"
+                ]
+              },
+              {
+                "cells": [
+                  "Great Britain (pound)"
+                ]
+              },
+              {
+                "cells": [
+                  "Japan (yen)"
+                ]
+              },
+              {
+                "cells": [
+                  "Mexico (peso)"
+                ]
+              },
+              {
+                "cells": [
+                  "Norway (krone)"
+                ]
+              },
+              {
+                "cells": [
+                  "New Zealand (dollar)"
+                ]
+              },
+              {
+                "cells": [
+                  "Singapore (dollar)"
                 ]
               }
             ],
-            "keyword": "And "
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@www"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-09T02:27:42.133Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefnitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Error\tmessage for\tnot\tselecting\tcurrency",
+        "description": "",
+        "id": "purchase-foreign-currency;error-message-for-not-selecting-currency",
+        "after": [
+          {
+            "result": {
+              "duration": 593290200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefnitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8261168100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user accesses the Purchase\tforeign\tcurrency\tcash tab",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.theUserAccessesThePurchaseForeignCurrencyCashTab()"
+            },
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 41884500,
+              "duration": 1077972100,
               "status": "passed"
             },
-            "line": 10,
-            "name": "message \"The new payee The Law Offices of Hyde, Price \u0026 Scharks was successfully created.\" should\tbe\tdisplayed",
+            "line": 21,
+            "name": "user tries\tto\tcalculate\tcost\twithout\tselecting\ta\tcurrency",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.user_tries_to_calculate_cost_without_selecting_a_currency()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4991200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "error\tmessage\tshould\tbe\tdisplayed \"Please, ensure that you have filled all the required fields with valid values.\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"The new payee The Law Offices of Hyde, Price \u0026 Scharks was successfully created.\"",
-                  "offset": 8
+                  "val": "\"Please, ensure that you have filled all the required fields with valid values.\"",
+                  "offset": 34
                 }
               ],
-              "location": "com.zerobank.stepdefnitions.AddNewPayee.messageShouldBeDisplayed(java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.errorMessageShouldBeDisplayed(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@www"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-09T02:27:52.081Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefnitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Error\tmessage for\tnot\tentering\tvalue",
+        "description": "",
+        "id": "purchase-foreign-currency;error-message-for-not-entering-value",
+        "after": [
+          {
+            "result": {
+              "duration": 601986100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefnitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8258950900,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user accesses the Purchase\tforeign\tcurrency\tcash tab",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.theUserAccessesThePurchaseForeignCurrencyCashTab()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1128127200,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user tries\tto\tcalculate\tcost\twithout\tentering\ta\tvalue",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.user_tries_to_calculate_cost_without_entering_a_value()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2999000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "error\tmessage\tshould\tbe\tdisplayed \"Please, ensure that you have filled all the required fields with valid values.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Please, ensure that you have filled all the required fields with valid values.\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.errorMessageShouldBeDisplayed(java.lang.String)"
             },
             "keyword": "Then "
           }
@@ -109,11 +285,20 @@
         ]
       }
     ],
-    "name": "Add\tnew\tpayee\tunder\tpay\tbills",
+    "name": "Purchase Foreign Currency",
     "description": "",
-    "id": "add-new-payee-under-pay-bills",
+    "id": "purchase-foreign-currency",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AddNewPayee.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/PurchaseForeignCurrency.feature",
+    "tags": [
+      {
+        "name": "@www",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

@@ -1,11 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AddNewPayee.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/PurchaseForeignCurrency.feature");
 formatter.feature({
-  "name": "Add\tnew\tpayee\tunder\tpay\tbills",
+  "name": "Purchase Foreign Currency",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@www"
+    }
+  ]
 });
 formatter.scenario({
-  "name": "Add\ta\tnew\tpayee",
+  "name": "Available\tcurrencies",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -18,37 +23,127 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "Add New Payee tab",
+  "name": "the user accesses the Purchase\tforeign\tcurrency\tcash tab",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "com.zerobank.stepdefnitions.AddNewPayee.add_New_Payee_tab()"
+  "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.theUserAccessesThePurchaseForeignCurrencyCashTab()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "creates\tnew\tpayee\tusing following\tinformation",
+  "name": "following\tcurrencies should be available",
   "rows": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {},
     {},
     {},
     {}
   ],
-  "keyword": "And "
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "com.zerobank.stepdefnitions.AddNewPayee.creates_new_payee_using_following_information(io.cucumber.datatable.DataTable)"
+  "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.following_currencies_should_be_available(io.cucumber.datatable.DataTable)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Error\tmessage for\tnot\tselecting\tcurrency",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@www"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user accesses the Purchase\tforeign\tcurrency\tcash tab",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.theUserAccessesThePurchaseForeignCurrencyCashTab()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "message \"The new payee The Law Offices of Hyde, Price \u0026 Scharks was successfully created.\" should\tbe\tdisplayed",
+  "name": "user tries\tto\tcalculate\tcost\twithout\tselecting\ta\tcurrency",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.user_tries_to_calculate_cost_without_selecting_a_currency()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "error\tmessage\tshould\tbe\tdisplayed \"Please, ensure that you have filled all the required fields with valid values.\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.zerobank.stepdefnitions.AddNewPayee.messageShouldBeDisplayed(java.lang.String)"
+  "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.errorMessageShouldBeDisplayed(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Error\tmessage for\tnot\tentering\tvalue",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@www"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user accesses the Purchase\tforeign\tcurrency\tcash tab",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.theUserAccessesThePurchaseForeignCurrencyCashTab()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user tries\tto\tcalculate\tcost\twithout\tentering\ta\tvalue",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.user_tries_to_calculate_cost_without_entering_a_value()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "error\tmessage\tshould\tbe\tdisplayed \"Please, ensure that you have filled all the required fields with valid values.\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrency.errorMessageShouldBeDisplayed(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
