@@ -34,7 +34,7 @@ public class PayBills extends BasePage{
     public WebElement pay;
 
     @FindBy(id = "np_new_payee_name")
-    public WebElement newPayee;
+    public WebElement newPayeeName;
 
     @FindBy(id = "np_new_payee_address")
     public WebElement payeeAdress;

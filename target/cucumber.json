@@ -3,10 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-06-09T01:04:17.568Z",
+        "start_timestamp": "2020-06-09T01:39:20.527Z",
         "before": [
           {
             "result": {
+              "duration": 997600,
               "status": "passed"
             },
             "match": {
@@ -14,14 +15,14 @@
             }
           }
         ],
-        "line": 31,
-        "name": "Type",
+        "line": 3,
+        "name": "Add\ta\tnew\tpayee",
         "description": "",
-        "id": "find-transactions-in-account-activity;type",
+        "id": "add-new-payee-under-pay-bills;add-a-new-payee",
         "after": [
           {
             "result": {
-              "duration": 624989800,
+              "duration": 594123000,
               "status": "passed"
             },
             "match": {
@@ -34,170 +35,71 @@
         "steps": [
           {
             "result": {
-              "duration": 8981820200,
+              "duration": 8929207000,
               "status": "passed"
             },
-            "line": 32,
-            "name": "the user accesses the Find Transactions tab",
+            "line": 4,
+            "name": "Add New Payee tab",
             "match": {
-              "location": "com.zerobank.stepdefnitions.FindTransactions.the_user_accesses_the_Find_Transactions_tab()"
+              "location": "com.zerobank.stepdefnitions.AddNewPayee.add_New_Payee_tab()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1074137500,
+              "duration": 1919771700,
               "status": "passed"
             },
-            "line": 33,
-            "name": "clicks search",
+            "line": 5,
+            "name": "creates\tnew\tpayee\tusing following\tinformation",
             "match": {
-              "location": "com.zerobank.stepdefnitions.FindTransactions.clicks_search()"
+              "location": "com.zerobank.stepdefnitions.AddNewPayee.creates_new_payee_using_following_information(io.cucumber.datatable.DataTable)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "Payee Name",
+                  "The Law Offices of Hyde, Price \u0026 Scharks"
+                ]
+              },
+              {
+                "cells": [
+                  "Payee Address",
+                  "100 Same st, Anytown, USA, 10001"
+                ]
+              },
+              {
+                "cells": [
+                  "Account",
+                  "Checking"
+                ]
+              },
+              {
+                "cells": [
+                  "Payee Details",
+                  "XYZ account"
+                ]
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1022920600,
+              "duration": 41884500,
               "status": "passed"
             },
-            "line": 34,
-            "name": "results table should show at least one result under \"Deposit\"",
+            "line": 10,
+            "name": "message \"The new payee The Law Offices of Hyde, Price \u0026 Scharks was successfully created.\" should\tbe\tdisplayed",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Deposit\"",
-                  "offset": 52
+                  "val": "\"The new payee The Law Offices of Hyde, Price \u0026 Scharks was successfully created.\"",
+                  "offset": 8
                 }
               ],
-              "location": "com.zerobank.stepdefnitions.FindTransactions.results_table_should_show_at_least_one_result_under(java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.AddNewPayee.messageShouldBeDisplayed(java.lang.String)"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1012938500,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "results table should show at least one result under \"Withdrawal\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Withdrawal\"",
-                  "offset": 52
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactions.results_table_should_show_at_least_one_result_under(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3170152900,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "user selects type \"Deposit\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Deposit\"",
-                  "offset": 18
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactions.user_selects_type(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1030884300,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "results table should show at least one result under \"Deposit\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Deposit\"",
-                  "offset": 52
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactions.results_table_should_show_at_least_one_result_under(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 15586200,
-              "status": "passed"
-            },
-            "line": 38,
-            "name": "results table should show no result under \"Withdrawal\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Withdrawal\"",
-                  "offset": 42
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactions.results_table_should_show_no_result_under(java.lang.String)"
-            },
-            "keyword": "But "
-          },
-          {
-            "result": {
-              "duration": 3170547300,
-              "status": "passed"
-            },
-            "line": 39,
-            "name": "user selects type \"Withdrawal\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Withdrawal\"",
-                  "offset": 18
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactions.user_selects_type(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1031015200,
-              "status": "passed"
-            },
-            "line": 40,
-            "name": "results table should show at least one result under \"Withdrawal\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Withdrawal\"",
-                  "offset": 52
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactions.results_table_should_show_at_least_one_result_under(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "results table should show no result under \"Deposit\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Deposit\"",
-                  "offset": 42
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactions.results_table_should_show_no_result_under(java.lang.String)"
-            },
-            "keyword": "But "
           }
         ],
         "tags": [
@@ -207,11 +109,11 @@
         ]
       }
     ],
-    "name": "Find Transactions in Account Activity",
+    "name": "Add\tnew\tpayee\tunder\tpay\tbills",
     "description": "",
-    "id": "find-transactions-in-account-activity",
+    "id": "add-new-payee-under-pay-bills",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/FindTransactions.feature",
+    "uri": "file:src/test/resources/features/AddNewPayee.feature",
     "tags": []
   }
 ]
